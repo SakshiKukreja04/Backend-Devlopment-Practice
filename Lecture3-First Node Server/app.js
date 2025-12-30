@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer(function(req, res) {
   console.log(req);
-  console.log(req.url, req.method, req.headers);
+  process.exit();//stops event loop after first request
 });
 
 const PORT = 3000;

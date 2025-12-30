@@ -22,9 +22,6 @@ const server = http.createServer(function(req, res) {
     return res.end();
   }
   else if(req.url.toLowerCase() === '/submit-details' && req.method === 'POST') {
-    req.on('data',chunk => {
-      console.log(chunk);
-    })
     fs.writeFileSync('user.txt', 'Sakshi Kukreja');
     res.statusCode = 302;
     res.setHeader('Location', '/');
